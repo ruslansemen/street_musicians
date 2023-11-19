@@ -12,4 +12,4 @@ class Location(models.Model):
         # self.latitude = Location.latitude
         if not (self.latitude and self.longitude):
             return None
-        return f"https://yandex.ru/maps/?ll={self.longitude},{self.latitude}&z=12&l=map"
+        return f"https://yandex.ru/maps/?pt={self.longitude},{self.latitude}&z=19&l=map"

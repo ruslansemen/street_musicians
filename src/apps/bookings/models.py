@@ -11,8 +11,10 @@ class Booking(models.Model):
     location = models.ForeignKey(Location, on_delete=models.PROTECT)
     # дата-время начала
     date_time_start = models.DateTimeField(
-        null=True, blank=True, help_text='дата-время начала')
+        null=True, blank=True, help_text="дата-время начала"
+    )
     # статус (статус бронирования)
 
     status = models.IntegerField(
-        choices=BookingStatus.choices, default=BookingStatus.SUBMITTED)
+        choices=BookingStatus.choices, default=BookingStatus.SUBMITTED
+    )

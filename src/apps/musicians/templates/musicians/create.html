@@ -1,0 +1,13 @@
+<body>
+  {% if musician %} {{ musician }} {% else %}
+  <form action="{% url 'musicians-add' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+      <input type="text" name="name" placeholder="Name" />
+      <input type="text" name="genre" placeholder="Genre" />
+      <input type="text" name="description" placeholder="About Me" />
+    </fieldset>
+    <input type="submit" value="Add" />
+  </form>
+  {% endif %}
+</body>

@@ -1,7 +1,12 @@
-from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
+from django.shortcuts import render, get_object_or_404
+
+from apps.musicians.models import Musician
 
 
 def index(request):
-    return HttpResponse("Привет musicians!")
+    # get_object_or_404(Musician, pk=1)
+    Musician or None
+    musicians = Musician.objects.all()
+    # library Jinja2 for templates
+    return render(request, "musicians/index.html", context={"musicians": musicians})

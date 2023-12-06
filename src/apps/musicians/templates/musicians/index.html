@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Musician</h1>
+<hr>
+{% for musician in musicians %}
+    <p><b>Name:</b> {{musician.name}}</p>
+    <p><b>Genre:</b> {{musician.genre}}</p>
+    <p><b>Description:</b> {{musician.description}}</p>
+    <p><b>Date of registration:</b> {{musician.date_of_registration}}</p>
+    <hr>
+{% endfor %}
+</body>
+</html>
